@@ -1,0 +1,45 @@
+{
+  // 编译选项，官方文档 https://www.tslang.cn/docs/handbook/compiler-options.html
+  "compilerOptions": {
+    // 允许从没有设置默认导出的模块中默认导入
+    "allowSyntheticDefaultImports": true,
+    // 解析非相对模块名的基准目录
+    "baseUrl": ".",
+    // 是否生成相应的 .d.ts 文件
+    "declaration": true,
+    // .d.ts 文件是否生成映射表
+    "declarationMap": true,
+    // 是否使用 esm 的导入方式来导入 CommonJs 模块
+    "esModuleInterop": true,
+    // 把 jsx 编译成 js
+    "jsx": "react",
+    // 编译过程中需要引入的库文件列表
+    "lib": ["dom"],
+    // 指定生成哪个模块系统代码
+    "module": "esnext",
+    // 决定如何处理模块
+    "moduleResolution": "node",
+    // 函数没有返回值时报错
+    "noImplicitReturns": true,
+    // 若有未使用的局部变量时报错
+    "noUnusedLocals": true,
+    // 若有未使用的参数则抛错
+    "noUnusedParameters": true,
+    // 编译输出的目录
+    "outDir": "./dist",
+    // 路径别名
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // 是否生成相应的 .map 文件
+    "sourceMap": true,
+    "strict": true,
+    // 是否开启严格模式，若开启的话，也开启了 noImplicitAny, noImplicitThis, alwaysStrict, strictNullChecks, strictFunctionTypes, strictPropertyInitialization
+    // 指定 ECMAScript 目标版本，默认 ES3
+    "target": "esnext"
+  },
+  // 指定需要编译的目录和文件
+  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.vue"],
+  // 指定不需要编译的目录和文件
+  "exclude": ["node_modules"]
+}
